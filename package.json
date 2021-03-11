@@ -1,5 +1,6 @@
 {
 	"name": "fcc-learn-node-with-express",
+	"author": "Carlos Maia",
 	"version": "0.1.0",
 	"dependencies": {
 		"body-parser": "^1.15.2",
@@ -10,5 +11,8 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
+	},
+	"engines": {
+		"node": "15.11.0"
 	}
 }
