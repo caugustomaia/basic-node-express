@@ -1,8 +1,12 @@
 var express = require('express');
 var app = express();
 
-console.log("Hello world");
+response = "Hello Express";
 
+
+app.get('/',function(req, res){
+    res.send(response);
+});
 
 
 
