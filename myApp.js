@@ -7,7 +7,7 @@ app.get('/',function(req, res){
     res.sendFile(response);
 });
 
-
+app.use('/public', express.static(__dirname + '/public'));
 
 
 
