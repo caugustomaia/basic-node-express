@@ -1,11 +1,10 @@
 var express = require('express');
 var app = express();
 
-response = "Hello Express";
-
+response = __dirname + "/views/index.html";
 
 app.get('/',function(req, res){
-    res.send(response);
+    res.sendFile(response);
 });
 
 
