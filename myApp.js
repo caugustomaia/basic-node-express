@@ -2,9 +2,16 @@ var express = require('express');
 var app = express();
 require('dotenv').config();
 
-response = __dirname + "/views/index.html";
+app.get('/now', function(req, res, next){
+    req.time = new Date().toString();
+}, function(req, res){
+    res.json({time:req.time});
+});
+
 
 /**
+response = __dirname + "/views/index.html";
+
 app.get('/',function(req, res){
     res.sendFile(response);
 });
@@ -23,13 +30,11 @@ app.get('/json', function(req,res){
     }
 });
 
-*/
-
 app.use(function(req, res, next){
     console.log(req.method + ' ' + req.path + ' - ' + req.ip);
     next();
 });
-
+*/
 
 
 
