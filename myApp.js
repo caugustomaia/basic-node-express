@@ -2,6 +2,11 @@ var express = require('express');
 var app = express();
 require('dotenv').config();
 
+app.get("/:word/echo", function(req,res){
+    res.json({'echo' : req.params.word})
+});
+
+/**
 app.get('/now', function(req, res, next){
     req.time = new Date().toString();
     next();
@@ -10,8 +15,6 @@ app.get('/now', function(req, res, next){
 
 });
 
-
-/**
 response = __dirname + "/views/index.html";
 
 app.get('/',function(req, res){
